@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    //Starting point
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Notepad.fxml"));
@@ -18,7 +19,7 @@ public class Main extends Application {
     }
 
 
-
+    //Launcher
     public static void main(String[] args) {
         launch(args);
     }
