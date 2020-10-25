@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="700.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="700.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane layoutY="98.0" prefHeight="430.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
          <children>
-            <TextArea fx:id="writingField" layoutY="33.0" prefHeight="395.0" prefWidth="700.0" promptText="Write something..." />
+            <TextArea fx:id="writingField" layoutY="33.0" prefHeight="395.0" prefWidth="700.0" promptText="Write something..." wrapText="true" />
             <MenuButton fx:id="fileMenu" layoutY="-1.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="60.0" text="File">
               <items>
-                <MenuItem fx:id="openMethod" mnemonicParsing="false" onAction="#initialize" text="Open" />
-                <MenuItem fx:id="saveMethod" mnemonicParsing="false" onAction="#initialize" text="Save as..." />
-                  <MenuItem fx:id="searchMethod" mnemonicParsing="false" text="Search" />
+                <MenuItem fx:id="openMethod" mnemonicParsing="false" onAction="#openMethodAction" text="Open" />
+                <MenuItem fx:id="saveMethod" mnemonicParsing="false" onAction="#saveMethodAction" text="Save as..." />
+                  <MenuItem fx:id="searchMethod" mnemonicParsing="false" onAction="#searchMethodAction" text="Search" />
               </items>
             </MenuButton>
             <MenuButton fx:id="editMenu" layoutX="60.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="60.0" text="Edit">
               <items>
-                <MenuItem fx:id="cutMethod" mnemonicParsing="false" text="Cut" />
-                <MenuItem fx:id="copyMethod" mnemonicParsing="false" text="Copy" />
-                  <MenuItem fx:id="pasteMethod" mnemonicParsing="false" text="Paste" />
-                  <MenuItem fx:id="cancelMethod" mnemonicParsing="false" text="Cancel" />
+                <MenuItem fx:id="cutMethod" mnemonicParsing="false" onAction="#cutMethodAction" text="Cut" />
+                <MenuItem fx:id="copyMethod" mnemonicParsing="false" onAction="#copyMethodAction" text="Copy" />
+                  <MenuItem fx:id="pasteMethod" mnemonicParsing="false" onAction="#pasteMethodAction" text="Paste" />
+                  <MenuItem fx:id="cancelMethod" mnemonicParsing="false" onAction="#cancelMethodAction" text="Cancel" />
                   <MenuItem fx:id="clearMethod" mnemonicParsing="false" onAction="#clearMethodAction" text="Clear Field" />
               </items>
             </MenuButton>
